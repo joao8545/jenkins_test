@@ -28,7 +28,7 @@ pipeline {
                 failure { 
                     echo 'FAIL'
                 }
-                succes { 
+                success { 
                     echo 'Eureka'
                 }
                 unstable { 
@@ -94,7 +94,7 @@ pipeline {
                 failure { 
                     echo 'FAIL'
                 }
-                succes { 
+                success { 
                     echo 'Eureka'
                 }
                 unstable { 
@@ -148,7 +148,7 @@ pipeline {
         failure { 
             echo 'FAIL'
         }
-        succes { 
+        success { 
             echo 'Eureka'
         }
         unstable { 
