@@ -113,6 +113,16 @@ pipeline {
                 pwd ()
             }
         }
+        stage('Stage writeFile'){
+            steps{
+                writeFile file: 'ex1.txt', text: 'this tis a file to archive'
+            }
+        }
+        stage('Stage archiveArtifacts'){
+            steps{
+                archiveArtifacts artifacts: 'ex1.txt', followSymlinks: false
+            }
+        }
         stage('Stage Parallel') {
             parallel {
                 stage('firstBranch') {
