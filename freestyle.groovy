@@ -5,6 +5,10 @@ freeStyleJob('example1') {
     }
     steps{
         groovyScriptFile("freestyle")
+        python{
+            command("print('Hello World')")
+        }
+        shell("touch a")
     }    
     triggers {
         githubPush()
