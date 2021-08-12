@@ -6,7 +6,9 @@ pipelineJob('example') {
           |     agent any
           |     stages{
           |         stage('stage1') {
-          |             echo 'hello world'
+          |             steps{       
+          |                 echo 'hello world!'
+          |             }
           |         }
           |     }
           |}'''.stripMargin())
