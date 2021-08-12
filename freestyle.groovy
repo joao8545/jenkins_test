@@ -9,7 +9,7 @@ freeStyleJob('example1') {
             command("print('Hello World')")
         }
         shell("touch a")
-        groovyScriptFile("freestyle")
+        
     }    
     triggers {
         githubPush()
