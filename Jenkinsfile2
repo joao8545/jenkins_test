@@ -9,20 +9,18 @@ node {
         echo 'Deploying....'
     }
     stage('Parallel') {
-        steps {
-            parallel firstBranch: {
-                sleep time: 300, unit: 'MILLISECONDS'
-                echo 'first branch'
-            }, secondBranch: {
-                sleep time: 200, unit: 'MILLISECONDS'
-                echo 'second branch'
-            }, thirdBranch: {
-                sleep time: 400, unit: 'MILLISECONDS'
-                echo 'third branch'
-            },fourthBranch: {
-                sleep time: 100, unit: 'MILLISECONDS'
-                echo 'fourth branch'
-            }
-        }
+        parallel firstBranch: {
+            sleep time: 300, unit: 'MILLISECONDS'
+            echo 'first branch'
+        }, secondBranch: {
+            sleep time: 200, unit: 'MILLISECONDS'
+            echo 'second branch'
+        }, thirdBranch: {
+            sleep time: 400, unit: 'MILLISECONDS'
+            echo 'third branch'
+        },fourthBranch: {
+            sleep time: 100, unit: 'MILLISECONDS'
+            echo 'fourth branch'
+        } 
     }
 }
