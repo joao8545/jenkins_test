@@ -197,7 +197,7 @@ pipeline {
                         }
                     }
                 }
-                archiveArtifacts artifacts: 'changelog.txt', followSymlinks: false
+                //archiveArtifacts artifacts: 'changelog.txt', followSymlinks: false
             }
             
         }
