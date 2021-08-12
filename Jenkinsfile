@@ -171,7 +171,7 @@ pipeline {
                             echo 'Running on step #0'
                         }
                         else {
-                            echo 'Running on step #1'
+                            echo 'Running not on step #0'
                         }
                     }
 
