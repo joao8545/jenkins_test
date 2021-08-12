@@ -117,25 +117,25 @@ pipeline {
             parallel {
                 stage('firstBranch') {
                     steps {
-                        sleep time: 30, unit: 'MILLISECONDS'
+                        sleep time: 300, unit: 'MILLISECONDS'
                         echo 'first branch'
                     }
                 }
                 stage('secondBranch') {
                     steps {
-                        sleep time: 20, unit: 'MILLISECONDS'
+                        sleep time: 200, unit: 'MILLISECONDS'
                         echo 'second branch'
                     }
                 }
                 stage('thirdBranch') {
                     steps {
-                        sleep time: 40, unit: 'MILLISECONDS'
+                        sleep time: 400, unit: 'MILLISECONDS'
                         echo 'third branch'
                     }
                 }
                 stage('fourthBranch') {
                     steps {
-                        sleep time: 10, unit: 'MILLISECONDS'
+                        sleep time: 100, unit: 'MILLISECONDS'
                         echo 'fourth branch'
                     }
                 }
