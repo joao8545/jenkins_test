@@ -116,19 +116,19 @@ pipeline {
         stage('Stage Parallel') {
             steps {
                 parallel {
-                    firstBranch: {
+                    stage('firstBranch') {
                         sleep time: 30, unit: 'MILLISECONDS'
                         echo 'first branch'
                     }
-                    secondBranch: {
+                    stage('secondBranch') {
                         sleep time: 20, unit: 'MILLISECONDS'
                         echo 'second branch'
                     }
-                    thirdBranch: {
+                    stage('thirdBranch') {
                         sleep time: 40, unit: 'MILLISECONDS'
                         echo 'third branch'
                     }
-                    fourthBranch: {
+                    stage('fourthBranch') {
                         sleep time: 10, unit: 'MILLISECONDS'
                         echo 'fourth branch'
                     }
