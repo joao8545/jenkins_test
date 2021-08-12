@@ -6,7 +6,7 @@ node {
     }
     stage('Test') {
         echo 'Building....'
-        sh 'touch $RANDOM'
+        sh 'touch test'
     }
     stage('Deploy') {
         echo 'Deploying....'
@@ -29,6 +29,7 @@ node {
         },fourthBranch: {
             sleep time: 100, unit: 'MILLISECONDS'
             echo 'fourth branch'
+            sh 'rm test'
         } 
     }
 }
