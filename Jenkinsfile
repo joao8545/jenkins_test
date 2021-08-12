@@ -40,7 +40,7 @@ pipeline {
                 cleanup { 
                     echo 'I will clean up'
                 }
-        }
+            }
         }
         stage('Stage deleteDir') {
             steps {
@@ -114,30 +114,36 @@ pipeline {
             }
         }
         stage('Stage Parallel') {
-            steps {
-                parallel {
-                    stage('firstBranch') {
+            parallel {
+                stage('firstBranch') {
+                    steps {
                         sleep time: 30, unit: 'MILLISECONDS'
                         echo 'first branch'
                     }
-                    stage('secondBranch') {
+                }
+                stage('secondBranch') {
+                    steps {
                         sleep time: 20, unit: 'MILLISECONDS'
                         echo 'second branch'
                     }
-                    stage('thirdBranch') {
+                }
+                stage('thirdBranch') {
+                    steps {
                         sleep time: 40, unit: 'MILLISECONDS'
                         echo 'third branch'
                     }
-                    stage('fourthBranch') {
+                }
+                stage('fourthBranch') {
+                    steps {
                         sleep time: 10, unit: 'MILLISECONDS'
                         echo 'fourth branch'
                     }
                 }
-            
             }
+        
+            
         }
         
-
     }
     post { 
         always { 
