@@ -9,7 +9,7 @@ pipeline {
         stage('Stage catchError') {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE', message: 'error on first step') {
-                    sh 'rmdir test1 test2 test3'
+                    sh 'rmdir test1 test2 test3 report'
                     sh 'hello'
                 // some block
                 }
@@ -204,7 +204,7 @@ pipeline {
         }
         stage('Stage Publish') {
             steps{
-                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '/', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
                 
             } 
         }
