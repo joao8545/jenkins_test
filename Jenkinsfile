@@ -1,9 +1,9 @@
 pipeline {
     agent any 
     options {
-    buildDiscarder(logRotator(numToKeepStr:'15', artifactNumToKeepStr: '30'))
-    timeout(time: 1, unit: 'MINUTES')
-    timestamps()
+        timestamps()
+        timeout(time: 2, unit: 'MINUTES')
+        buildDiscarder(logRotator(daysToKeepStr: '7', numToKeepStr: '20', artifactNumToKeepStr: '10', artifactDaysToKeepStr: '7'))
     }
     stages {
         stage('Stage catchError') {
