@@ -204,7 +204,8 @@ pipeline {
         }
         stage('Stage Publish') {
             steps{
-                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+                sh 'echo "hello world" > report/index.html'
+                publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'report', reportFiles: 'index.html', reportName: 'HTML Report'])
                 
             } 
         }
