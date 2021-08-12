@@ -1,5 +1,5 @@
 
 # jenkins_test
-not master
+not master yet
  
 adasd
