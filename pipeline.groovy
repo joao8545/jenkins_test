@@ -1,10 +1,12 @@
-pipeline{
-    agent any
-    stages{
-        stage('stage1') {
-            steps{       
-                echo 'hello world!!'
+pipelineJob('example1') {
+    definition {
+        cpsScm {
+            scm {
+                github('joao8545/jenkins_test')
             }
+
+            scriptPath("pipeline")
+            sandbox()
         }
     }
 }
