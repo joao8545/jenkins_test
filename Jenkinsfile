@@ -125,12 +125,14 @@ pipeline {
         }
         stage('Stage writeFile') {
             steps{
-                writeFile file: 'ex1.txt', text: 'this tis a file to archive'
+                writeFile file: 'ex1.txt', text: 'this tis a file to archive\n'
+                sh 'git log --oneline --decorate --all --graph > ex2.txt'
             }
         }
         stage('Stage archiveArtifacts') {
             steps{
                 archiveArtifacts artifacts: 'ex1.txt', followSymlinks: false
+                archiveArtifacts artifacts: 'ex2.txt', followSymlinks: false
             }
         }
         stage('Stage Parallel') {
