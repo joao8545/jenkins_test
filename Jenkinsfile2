@@ -1,6 +1,8 @@
 node {
     stage('Build') {
         echo 'Building....'
+        sh 'git config --global user.email "you@example.com"'
+        sh 'git config --global user.name "Your Name"'
     }
     stage('Test') {
         echo 'Building....'
