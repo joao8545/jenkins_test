@@ -5,18 +5,7 @@ pipelineJob('example1') {
                 github('joao8545/jenkins_test')
             }
 
-
-            script('''
-            |pipeline{
-            |   agent any
-            |   stages{
-            |       stage('stage1') {
-            |           steps{       
-            |               echo 'hello world!'
-            |           }
-            |       }
-            |   }
-            |}'''.stripMargin())
+            scriptPath("pipeline.groovy")
             sandbox()
         }
     }
