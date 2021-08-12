@@ -9,7 +9,8 @@ pipeline {
         stage('Stage catchError') {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE', message: 'error on first step') {
-                    sh 'rmdir test1 test2 test3 report'
+                    sh 'rm report/index.html'
+                    sh 'rmdir test1 test2 test3 report '
                     sh 'hello'
                 // some block
                 }
