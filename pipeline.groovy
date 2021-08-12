@@ -6,7 +6,7 @@ pipelineJob('example1') {
             }
 
             scriptPath("pipeline")
-            sandbox()
+            
         }
     }
 }
