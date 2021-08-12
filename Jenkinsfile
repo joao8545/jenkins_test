@@ -28,7 +28,7 @@ pipeline {
                 failure { 
                     echo 'FAIL'
                 }
-                success { 
+                succes { 
                     echo 'Eureka'
                 }
                 unstable { 
@@ -94,7 +94,7 @@ pipeline {
                 failure { 
                     echo 'FAIL'
                 }
-                success { 
+                succes { 
                     echo 'Eureka'
                 }
                 unstable { 
@@ -126,38 +126,39 @@ pipeline {
                 }
             }
         }
-        post { 
-            always { 
-                echo 'I will always say Hello again!'
-            }
-            changed { 
-                echo 'I am a chameleon'
-            }
-            fixed { 
-                echo 'its fixed'
-            }
-            regression { 
-                echo 'It is not linear'
-            }
-            aborted { 
-                echo 'Abort!'
-            }
-            failure { 
-                echo 'FAIL'
-            }
-            success { 
-                echo 'Eureka'
-            }
-            unstable { 
-                echo 'It is not stable'
-            }
-            unsuccessful { 
-                echo 'It was not a success'
-            }
-            cleanup { 
-                echo 'I will clean up'
-            }
-        }
+        
 
+    }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+        }
+        changed { 
+            echo 'I am a chameleon'
+        }
+        fixed { 
+            echo 'its fixed'
+        }
+        regression { 
+            echo 'It is not linear'
+        }
+        aborted { 
+            echo 'Abort!'
+        }
+        failure { 
+            echo 'FAIL'
+        }
+        succes { 
+            echo 'Eureka'
+        }
+        unstable { 
+            echo 'It is not stable'
+        }
+        unsuccessful { 
+            echo 'It was not a success'
+        }
+        cleanup { 
+            echo 'I will clean up'
+        }
     }
 }
