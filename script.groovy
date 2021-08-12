@@ -2,13 +2,7 @@ pipelineJob('example1') {
     definition {
         cpsScm {
             scm {
-                git {
-                    remote {
-                        credentials "${GITHUB_CRED_USR}"
-                        url "https://github.com/${GITHUB_CRED_USR}/jenkins_test"
-                    }
-                    
-                }
+                github('joao8545/jenkins_test')
             }
 
 
