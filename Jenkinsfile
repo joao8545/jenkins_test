@@ -51,7 +51,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'ls'
-                sh 'mkdir test1 test2 test3'
+                sh 'mkdir test1 test2 test3 report'
                 sh 'ls'
                 dir ('test1'){
                     sh 'pwd'
