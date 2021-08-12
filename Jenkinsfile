@@ -182,6 +182,7 @@ pipeline {
         }
         stage('Stage changelog') {
             steps{
+                sh "touch changelog.txt"
                 script{
                     def changeLogSets = currentBuild.changeSets
                     for (int i = 0; i < changeLogSets.size(); i++) {
@@ -197,7 +198,7 @@ pipeline {
                         }
                     }
                 }
-                //archiveArtifacts artifacts: 'changelog.txt', followSymlinks: false
+                archiveArtifacts artifacts: 'changelog.txt', followSymlinks: false
             }
             
         }
