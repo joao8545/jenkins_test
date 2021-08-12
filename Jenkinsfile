@@ -119,13 +119,16 @@ pipeline {
                     firstBranch: {
                         sleep time: 30, unit: 'MILLISECONDS'
                         echo 'first branch'
-                    }, secondBranch: {
+                    }
+                    secondBranch: {
                         sleep time: 20, unit: 'MILLISECONDS'
                         echo 'second branch'
-                    }, thirdBranch: {
+                    }
+                    thirdBranch: {
                         sleep time: 40, unit: 'MILLISECONDS'
                         echo 'third branch'
-                    },fourthBranch: {
+                    }
+                    fourthBranch: {
                         sleep time: 10, unit: 'MILLISECONDS'
                         echo 'fourth branch'
                     }
