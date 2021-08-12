@@ -2,7 +2,7 @@ pipeline {
     agent any 
     options {
         timestamps()
-        timeout(time: 2, unit: 'MINUTES')
+        timeout(time: 10, unit: 'MINUTES')
         buildDiscarder(logRotator(daysToKeepStr: '7', numToKeepStr: '20', artifactNumToKeepStr: '10', artifactDaysToKeepStr: '7'))
     }
     stages {
