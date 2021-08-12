@@ -113,12 +113,17 @@ pipeline {
                 pwd ()
             }
         }
-        stage('Stage writeFile'){
+        stage('Stage input') {
+            steps {
+                input 'should we proceed?'
+            }
+        }
+        stage('Stage writeFile') {
             steps{
                 writeFile file: 'ex1.txt', text: 'this tis a file to archive'
             }
         }
-        stage('Stage archiveArtifacts'){
+        stage('Stage archiveArtifacts') {
             steps{
                 archiveArtifacts artifacts: 'ex1.txt', followSymlinks: false
             }
@@ -150,8 +155,23 @@ pipeline {
                     }
                 }
             }
-        
-            
+        }
+        stage('Stage script') {
+            steps{
+                script{
+                    for (i=0; i<5; i++) { 
+                        print 'This is the step #' +i
+                        if (i==0)
+                        {
+                            echo 'Running on step #0'
+                        }
+                        else {
+                            echo 'Running on step #1'
+                        }
+                    }
+
+                }
+            }
         }
         
     }
