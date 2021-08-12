@@ -13,7 +13,7 @@ node {
         withCredentials([gitUsernamePassword(credentialsId: '06392f0c-bda8-49e2-b2b3-80c5fff7da29', gitToolName: 'Default')]) {
             sh 'git add .'
             sh 'git commit -m "from jenkins"'
-            sh 'git push'
+            sh 'git push origin HEAD:master'
         }
     }
     stage('Parallel') {
