@@ -10,6 +10,6 @@ pipelineJob('NEWexample') {
         }
     }
     triggers {
-        upstream('JobDSL', 'UNSTABLE')
+        upstream('JobDSL', 'SUCCESS')
     }
 }
