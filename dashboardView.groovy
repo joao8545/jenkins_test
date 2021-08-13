@@ -2,7 +2,7 @@ dashboardView('NEWexample') {
     jobs {
         name("JobDSL")
         regex(/acme-.*/)
-        name('NEWexample1')
+        regex('NEWexample.*')
     }
     columns {
         buildButton()
