@@ -1,4 +1,7 @@
 multiJob('example2') {
+    triggers {
+        upstream('example1', 'SUCCESS')
+    }
     steps {
         phase('Second') {
             phaseJob('JobZ') {
@@ -31,7 +34,5 @@ multiJob('example2') {
             }
         }
     }
-    triggers {
-        upstream('example1', 'SUCCESS')
-    }
+    
 }
