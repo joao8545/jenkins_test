@@ -4,7 +4,7 @@ freeStyleJob('NEWexample1') {
         github('joao8545/jenkins_test')
     }
     steps{
-        groovyScriptFile("freestyle")
+        //groovyScriptFile("freestyle")
         shell("touch a")
         
     }    
