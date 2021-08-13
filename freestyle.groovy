@@ -1,4 +1,4 @@
-freeStyleJob('example1') {
+freeStyleJob('NEWexample1') {
     logRotator(-1, 10)
     scm{
         github('joao8545/jenkins_test')
@@ -13,6 +13,6 @@ freeStyleJob('example1') {
     }    
     triggers {
         githubPush()
-        upstream('example', 'SUCCESS')
+        upstream('NEWexample', 'SUCCESS')
     }
 }

@@ -1,6 +1,6 @@
-multiJob('example2') {
+multiJob('NEWexample2') {
     triggers {
-        upstream('example1', 'SUCCESS')
+        upstream('NEWexample1', 'SUCCESS')
     }
     steps {
         phase('Second') {

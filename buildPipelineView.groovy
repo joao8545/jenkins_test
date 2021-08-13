@@ -1,9 +1,9 @@
-buildPipelineView('project-A') {
+buildPipelineView('project-B') {
     filterBuildQueue()
     filterExecutors()
     title('Project A CI Pipeline')
     displayedBuilds(5)
-    selectedJob('example')
+    selectedJob('JobDSL')
     alwaysAllowManualTrigger()
     showPipelineParameters()
     refreshFrequency(60)

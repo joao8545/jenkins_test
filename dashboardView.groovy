@@ -1,7 +1,8 @@
-dashboardView('example') {
+dashboardView('NEWexample') {
     jobs {
+        name("JobDSL")
         regex(/acme-.*/)
-        name('example1')
+        name('NEWexample1')
     }
     columns {
         buildButton()
