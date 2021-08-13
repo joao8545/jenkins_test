@@ -3,16 +3,20 @@ sectionedView('project-summary') {
     filterExecutors()
     sections {
         listView {
-            name('Project A')
+            name('New projects from test')
             jobs {
-                regex(/example.*/)
+                regex(/NEWexample.*/)
             }
             columns {
+                buildButton()
                 status()
                 weather()
                 name()
                 lastSuccess()
                 lastFailure()
+                lastBuildConsole()
+                progressBar()
+                
             }
         }
         listView {
