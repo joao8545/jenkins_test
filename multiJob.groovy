@@ -31,4 +31,7 @@ multiJob('example2') {
             }
         }
     }
+    triggers {
+        upstream('example1', 'SUCCESS')
+    }
 }
