@@ -10,6 +10,9 @@ dashboardView('NEWexample') {
         weather()
         name()
         progressBar()
+        lastBuildConsole()
+        lastSuccess()
+        lastFailure()
         
     }
     topPortlets {
