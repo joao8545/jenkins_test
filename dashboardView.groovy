@@ -1,6 +1,7 @@
 dashboardView('example') {
     jobs {
         regex(/acme-.*/)
+        name('example')
     }
     columns {
         buildButton()
