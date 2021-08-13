@@ -23,9 +23,6 @@ dashboardView('example') {
         testTrendChart()
     }
     bottomPortlets {
-        iframe {
-            effectiveUrl('http://example.com')
-        }
         testStatisticsGrid()
         buildStatistics()
     }
