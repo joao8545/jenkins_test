@@ -9,4 +9,7 @@ pipelineJob('example') {
             
         }
     }
+    triggers {
+        upstream('JobDSL', 'UNSTABLE')
+    }
 }
