@@ -13,5 +13,6 @@ freeStyleJob('example1') {
     }    
     triggers {
         githubPush()
+        upstream('example', 'SUCCESS')
     }
 }
