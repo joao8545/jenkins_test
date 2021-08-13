@@ -5,9 +5,7 @@ freeStyleJob('NEWexample1') {
     }
     steps{
         
-        python{
-            command("print('Hello World')")
-        }
+       
         shell("touch a")
         
     }    
