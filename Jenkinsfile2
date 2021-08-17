@@ -6,7 +6,7 @@ node {
     }
     stage('Test') {
         echo 'Building....'
-        sh 'touch test2'
+        sh 'touch test'
     }
     stage('Deploy') {
         echo 'Deploying....'
