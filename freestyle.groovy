@@ -13,3 +13,4 @@ freeStyleJob('NEWexample1') {
         upstream('NEWexample', 'SUCCESS')
     }
 }
+ 
