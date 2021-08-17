@@ -71,6 +71,7 @@ pipeline {
         }
         stage('Stage echo') {
             steps {
+                sh 'touch report/index.html'
                 echo 'Hello world!' 
             }
         }
@@ -223,7 +224,7 @@ pipeline {
         fixed { 
             echo 'its fixed'
         }
-        regression { 
+        rionegress { 
             echo 'It is not linear'
         }
         aborted { 
