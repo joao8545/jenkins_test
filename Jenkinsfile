@@ -224,7 +224,7 @@ pipeline {
         fixed { 
             echo 'its fixed'
         }
-        regress { 
+        regression { 
             echo 'It is not linear'
         }
         aborted { 
